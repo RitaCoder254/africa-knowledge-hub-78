@@ -11,6 +11,7 @@ import KnowledgeHub from "./pages/KnowledgeHub";
 import Impact from "./pages/Impact";
 import GetInvolved from "./pages/GetInvolved";
 import Contact from "./pages/Contact";
+import Downloads from "./pages/Downloads";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -28,6 +29,7 @@ const App = () => (
           <Route path="/programs" element={<Programs />} />
           <Route path="/knowledge" element={<KnowledgeHub />} />
           <Route path="/impact" element={<Impact />} />
+          <Route path="/downloads" element={<Downloads />} />
           <Route path="/get-involved" element={<GetInvolved />} />
           <Route path="/contact" element={<Contact />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

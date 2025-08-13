@@ -9,26 +9,26 @@ All colors MUST be HSL.
 @layer base {
   :root {
     /* Information Africa Brand Colors */
-    --background: 0 0% 100%; /* Clean white */
-    --foreground: 0 0% 20%; /* Dark text #333333 */
+    --background: 0 0% 100%; /* #FFFFFF */
+    --foreground: 0 0% 27%; /* #444444 */
 
-    --card: 120 50% 98%; /* Neutral background #f8fcf8 */
-    --card-foreground: 0 0% 20%;
+    --card: 0 0% 100%; /* White for cards */
+    --card-foreground: 0 0% 27%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 20%;
+    --popover-foreground: 0 0% 27%;
 
-    --primary: 120 50% 20%; /* Primary website green #336633 */
+    --primary: 99 55% 32%; /* #2D6F37 - Dark green */
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 120 50% 98%; /* Neutral background */
-    --secondary-foreground: 120 50% 20%;
+    --secondary: 0 0% 94%; /* #F0F0F0 - Light grey */
+    --secondary-foreground: 0 0% 27%;
 
-    --muted: 120 30% 95%;
+    --muted: 0 0% 94%;
     --muted-foreground: 0 0% 45%;
 
-    --accent: 73 60% 55%; /* Lime green accent #97ce4e */
-    --accent-foreground: 0 0% 20%;
+    --accent: 84 62% 51%; /* #77B737 - Light green */
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
@@ -102,7 +102,7 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'Inter', system-ui, sans-serif;
+    font-family: 'Libre Baskerville', serif;
   }
 
   html {

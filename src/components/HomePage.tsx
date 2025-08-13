@@ -101,20 +101,25 @@ const HomePage = () => {
         <div className="relative z-10 container mx-auto px-4 text-center text-white">
           <div className="max-w-4xl mx-auto fade-in">
             <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-              Knowledge Management and Dissemination Throughout Africa and Beyond
+              Building a Knowledge-Driven Africa
             </h1>
-            <p className="text-xl md:text-2xl mb-4 opacity-90">
-              MAKING A MARK INTERNATIONALLY
+            <p className="text-xl md:text-2xl mb-8 opacity-90 max-w-4xl mx-auto">
+              Empowering communities through evidence-based solutions, strategic learning, and sustainable development initiatives
             </p>
-            <p className="text-lg mb-8 opacity-80 max-w-3xl mx-auto">
-              The Africa Knowledge Management Transformative Caravan monthly e-workshops: July 2020 to-date - the Africa we Want (AU 2063)
-            </p>
-            <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-8 py-4" asChild>
-              <Link to="/caravan">
-                Check out more
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Link>
-            </Button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-8 py-4" asChild>
+                <Link to="/programs">
+                  Explore Our Work
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </Link>
+              </Button>
+              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary font-semibold px-8 py-4" asChild>
+                <Link to="/get-involved">
+                  Join Our Mission
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </Link>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
@@ -153,10 +158,14 @@ const HomePage = () => {
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
                 {[
-                  'Environmental Science and Climate change',
-                  'Emerging trends in Information Management',
-                  'Peace building and Conflict Resolution',
-                  'Knowledge Management'
+                  'Environmental Science and Climate Change',
+                  'Peace Building and Conflict Resolution',
+                  'ICT Capacity Building',
+                  'Community Engagement',
+                  'Emerging Trends in Information Management',
+                  'Knowledge Management Systems',
+                  'Policy Development Support',
+                  'Strategic Learning Initiatives'
                 ].map((expertise, index) => (
                   <div key={index} className="flex items-center space-x-2">
                     <CheckCircle className="w-5 h-5 text-accent" />

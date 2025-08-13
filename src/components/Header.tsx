@@ -22,6 +22,7 @@ const Header = () => {
     { name: 'Knowledge Hub', href: '/knowledge' },
     { name: 'What We Do', href: '/programs' },
     { name: 'Impact', href: '/impact' },
+    { name: 'Downloads', href: '/downloads' },
     { name: 'Get Involved', href: '/get-involved' },
     { name: 'Contact', href: '/contact' },
   ];
