@@ -112,6 +112,13 @@ const Downloads = () => {
         {/* Hero Section */}
         <section className="py-20 bg-primary text-primary-foreground">
           <div className="container mx-auto px-4 text-center">
+            <div className="flex justify-center mb-8">
+              <img 
+                src="/src/assets/information-africa-logo.png" 
+                alt="Information Africa Logo"
+                className="w-24 h-24 object-contain"
+              />
+            </div>
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               Downloads & Resources
             </h1>

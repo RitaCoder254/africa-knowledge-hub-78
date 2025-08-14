@@ -35,7 +35,7 @@ const Header = () => {
           <div className="flex justify-center items-center space-x-6 text-sm">
             <div className="flex items-center space-x-2">
               <Phone className="w-4 h-4" />
-              <span>+254 724 872 085</span>
+              <span>+254724872085</span>
             </div>
             <div className="flex items-center space-x-2">
               <Mail className="w-4 h-4" />
@@ -43,7 +43,7 @@ const Header = () => {
             </div>
             <div className="flex items-center space-x-2">
               <MapPin className="w-4 h-4" />
-              <span>Nairobi, Kenya</span>
+              <span>P.O. Box 66063 - 00800, Nairobi, Kenya</span>
             </div>
           </div>
         </div>
@@ -57,12 +57,14 @@ const Header = () => {
           <div className="flex justify-between items-center py-4">
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-3">
-              <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-xl">IA</span>
-              </div>
+              <img 
+                src="/src/assets/information-africa-logo.png" 
+                alt="Information Africa Logo"
+                className="w-12 h-12 object-contain"
+              />
               <div>
                 <h1 className="text-xl font-bold text-primary">Information Africa</h1>
-                <p className="text-xs text-muted-foreground">Knowledge • Innovation • Impact</p>
+                <p className="text-xs text-muted-foreground">Transforming Africa through knowledge</p>
               </div>
             </Link>
 
@@ -81,9 +83,6 @@ const Header = () => {
                   {item.name}
                 </Link>
               ))}
-              <Button className="bg-accent hover:bg-accent/90 text-accent-foreground">
-                Donate Now
-              </Button>
             </div>
 
             {/* Mobile Menu Button */}
@@ -113,9 +112,6 @@ const Header = () => {
                     {item.name}
                   </Link>
                 ))}
-                <Button className="bg-accent hover:bg-accent/90 text-accent-foreground w-fit">
-                  Donate Now
-                </Button>
               </div>
             </div>
           )}

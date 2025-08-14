@@ -100,6 +100,13 @@ const HomePage = () => {
         
         <div className="relative z-10 container mx-auto px-4 text-center text-white">
           <div className="max-w-4xl mx-auto fade-in">
+            <div className="flex justify-center mb-8">
+              <img 
+                src="/src/assets/information-africa-logo.png" 
+                alt="Information Africa Logo"
+                className="w-32 h-32 object-contain"
+              />
+            </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
               Building a Knowledge-Driven Africa
             </h1>

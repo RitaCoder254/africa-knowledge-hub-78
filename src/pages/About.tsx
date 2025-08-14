@@ -62,12 +62,19 @@ const About = () => {
       <main className="pt-32 md:pt-28">
         
         {/* Hero Section */}
-        <section className="py-20">
+        <section className="py-20 bg-gradient-to-r from-primary/10 to-accent/10">
           <div className="container mx-auto px-4">
             <div className="text-center max-w-4xl mx-auto mb-16">
+              <div className="flex justify-center mb-8">
+                <img 
+                  src="/src/assets/information-africa-logo.png" 
+                  alt="Information Africa Logo"
+                  className="w-24 h-24 object-contain"
+                />
+              </div>
               <h1 className="text-4xl md:text-6xl font-bold mb-6 text-primary">About Information Africa</h1>
               <p className="text-xl text-muted-foreground">
-                Empowering Africa through access and use of information via knowledge services since 2020
+                Transforming Africa through knowledge • Empowering communities through evidence-based solutions since 2020
               </p>
             </div>
           </div>
@@ -81,19 +88,26 @@ const About = () => {
                 <h2 className="text-3xl font-bold mb-6 text-primary">Our Story</h2>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
                   <p>
-                    Information Africa Organization (IAO) was registered in September 2020 in Nairobi, Kenya, 
-                    with a clear mission to enable access and use of knowledge and information through knowledge 
-                    services including Knowledge Management, Archives & Records Management, and Libraries & Resource Centres.
+                    Information Africa Organization was founded in September 2020 in Nairobi, Kenya, with a bold vision: 
+                    to transform Africa through knowledge. We recognized that across our continent, communities possessed 
+                    incredible wisdom and potential, but often lacked access to the structured information and evidence-based 
+                    solutions needed to drive sustainable development.
                   </p>
                   <p>
-                    Our journey began with a vision to improve livelihoods across Africa by bridging the knowledge gap 
-                    that often hinders development progress. We recognized that information is power, and access to 
-                    relevant, timely knowledge can transform communities, organizations, and entire nations.
+                    Our key objective emerged from a critical need we observed: to build the capacity of African youth in 
+                    information and communication technologies (ICT) and knowledge management, enabling them to improve their 
+                    livelihoods and become catalysts for continental transformation. We believe that when young Africans are 
+                    equipped with these essential skills, they become powerful agents of change in their communities.
                   </p>
                   <p>
-                    Today, IAO is accredited as an observer to the Governing Body of United Nations Environment Programme 
-                    (UN Environment), reflecting our commitment to environmental sustainability and global partnerships 
-                    in our knowledge management initiatives.
+                    Since our inception, we have facilitated over 60 knowledge-sharing sessions through our innovative Caravan 
+                    program, connecting practitioners, policymakers, and communities across multiple African regions. Through 
+                    strategic partnerships and collaborative networks, we continue building a knowledge-driven Africa where 
+                    evidence-based solutions guide development decisions at every level.
+                  </p>
+                  <p>
+                    Today, Information Africa stands as a bridge between knowledge and action, transforming how African 
+                    communities access, share, and apply information for sustainable development and improved livelihoods.
                   </p>
                 </div>
               </div>

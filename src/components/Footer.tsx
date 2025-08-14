@@ -42,15 +42,17 @@ const Footer = () => {
           {/* Logo and Mission */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-3 mb-4">
-              <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center">
-                <span className="text-accent-foreground font-bold text-xl">IA</span>
-              </div>
+              <img 
+                src="/src/assets/information-africa-logo.png" 
+                alt="Information Africa Logo"
+                className="w-12 h-12 object-contain"
+              />
               <div>
                 <h3 className="text-lg font-bold">Information Africa</h3>
               </div>
             </div>
             <p className="text-primary-foreground/80 text-sm mb-4">
-              Transforming Africa through knowledge management and dissemination.
+              Transforming Africa through knowledge.
             </p>
             <div className="flex space-x-4">
               {socialLinks.map(({ Icon, href, label }) => (
@@ -100,14 +102,14 @@ const Footer = () => {
               <Phone className="w-5 h-5 text-accent" />
               <div>
                 <p className="font-medium">Phone</p>
-                <p className="text-primary-foreground/80 text-sm">+254 724 872 085</p>
+                <p className="text-primary-foreground/80 text-sm">+254724872085</p>
               </div>
             </div>
             <div className="flex items-center space-x-3">
               <MapPin className="w-5 h-5 text-accent" />
               <div>
                 <p className="font-medium">Location</p>
-                <p className="text-primary-foreground/80 text-sm">Nairobi, Kenya</p>
+                <p className="text-primary-foreground/80 text-sm">P.O. Box 66063 - 00800, Nairobi, Kenya</p>
               </div>
             </div>
           </div>
