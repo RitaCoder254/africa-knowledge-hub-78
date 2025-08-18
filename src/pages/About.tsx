@@ -2,35 +2,61 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import WhatsAppFloat from '../components/WhatsAppFloat';
 import { Card, CardContent } from '../components/ui/card';
-import { CheckCircle, Users, Target, Heart, Award } from 'lucide-react';
+import { CheckCircle, Users, Target, Heart, Award, Calendar, MapPin, GraduationCap } from 'lucide-react';
 import aboutImage from '../assets/about-collaboration.jpg';
+import conferenceParticipants from '../assets/conference-participants.jpg';
+import certificateCeremony from '../assets/certificate-ceremony.jpg';
+import networkingEvent from '../assets/networking-event.jpg';
 
 const About = () => {
-  const teamMembers = [
+  const successStories = [
     {
-      name: 'Dr. Sarah Mwangi',
-      role: 'Executive Director',
-      bio: 'Leading expert in knowledge management with over 15 years of experience in African development.',
-      education: 'PhD in Information Science, University of Nairobi'
+      year: '2024',
+      title: 'The Redsea Cultural Foundation, Somaliland',
+      subtitle: 'Capacity Building',
+      description: 'Pre-HIBF2024 Course: Training for Professional Librarians and Archivists',
+      duration: '17th July to 29th July 2024',
+      participants: 10,
+      icon: GraduationCap,
+      image: conferenceParticipants
     },
     {
-      name: 'Prof. James Achieng',
-      role: 'Head of Research',
-      bio: 'Renowned researcher in ICT and sustainable development across Africa.',
-      education: 'PhD in Development Studies, Makerere University'
+      year: '2021-2025',
+      title: 'Coulson Harney LLP Law Firm, Nairobi',
+      subtitle: 'Library Management System Implementation',
+      description: 'Implement the KOHA Integrated library management system and physical library setup',
+      duration: 'Ongoing with multiple Service Level Agreements',
+      participants: null,
+      icon: Users,
+      image: certificateCeremony
     },
     {
-      name: 'Mary Okonkwo',
-      role: 'Program Manager',
-      bio: 'Specialist in capacity building and community engagement with extensive field experience.',
-      education: 'MSc in Development Management, University of Cape Town'
+      year: '2022',
+      title: 'Gabiley National Library (GNL), Somaliland',
+      subtitle: 'Capacity Building',
+      description: 'In-house training on Library Science & Information Management',
+      duration: '19th - 24th February 2022',
+      participants: 15,
+      icon: Target,
+      image: networkingEvent
     },
     {
-      name: 'Daniel Kibaki',
-      role: 'ICT Coordinator',
-      bio: 'Technology expert focused on digital transformation in African organizations.',
-      education: 'BSc in Computer Science, Kenyatta University'
+      year: '2022',
+      title: 'Museum Management for Heritage Tourism',
+      subtitle: 'Berbera Public Museum Support Project',
+      description: 'Major output: Draft National Museum Policy for Somaliland',
+      duration: '5th – 17th February 2022',
+      participants: 25,
+      icon: Award,
+      image: conferenceParticipants
     }
+  ];
+
+  const caravanStats = [
+    { number: '60+', label: 'Themed Workshops', icon: GraduationCap },
+    { number: '35+', label: 'African Countries', icon: MapPin },
+    { number: '2000+', label: 'Participants', icon: Users },
+    { number: '300+', label: 'Institutions', icon: Target }
   ];
 
   const values = [
@@ -175,28 +201,71 @@ const About = () => {
           </div>
         </section>
 
-        {/* Our Team */}
-        <section id="team" className="py-20">
+        {/* Success Stories */}
+        <section id="success-stories" className="py-20">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold text-center mb-12 text-primary">Meet Our Team</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {teamMembers.map((member, index) => (
+            <h2 className="text-3xl font-bold text-center mb-12 text-primary">Our Success Stories</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+              {successStories.map((story, index) => (
                 <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow duration-300">
-                  <div className="h-64 bg-gradient-to-br from-primary to-accent flex items-center justify-center">
-                    <div className="w-24 h-24 bg-white rounded-full flex items-center justify-center">
-                      <span className="text-2xl font-bold text-primary">
-                        {member.name.split(' ').map(n => n[0]).join('')}
-                      </span>
-                    </div>
+                  <div className="h-48 overflow-hidden">
+                    <img 
+                      src={story.image} 
+                      alt={story.title}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                   <CardContent className="p-6">
-                    <h4 className="text-lg font-semibold mb-1 text-primary">{member.name}</h4>
-                    <p className="text-accent font-medium mb-3">{member.role}</p>
-                    <p className="text-sm text-muted-foreground mb-3">{member.bio}</p>
-                    <p className="text-xs text-muted-foreground font-medium">{member.education}</p>
+                    <div className="flex items-center justify-between mb-3">
+                      <span className="text-sm font-semibold text-accent bg-accent/10 px-3 py-1 rounded-full">
+                        {story.year}
+                      </span>
+                      <story.icon className="w-5 h-5 text-primary" />
+                    </div>
+                    <h4 className="text-lg font-semibold mb-2 text-primary">{story.title}</h4>
+                    <p className="text-accent font-medium mb-2">{story.subtitle}</p>
+                    <p className="text-sm text-muted-foreground mb-3">{story.description}</p>
+                    <div className="flex items-center text-xs text-muted-foreground space-x-4">
+                      <div className="flex items-center space-x-1">
+                        <Calendar className="w-3 h-3" />
+                        <span>{story.duration}</span>
+                      </div>
+                      {story.participants && (
+                        <div className="flex items-center space-x-1">
+                          <Users className="w-3 h-3" />
+                          <span>{story.participants} participants</span>
+                        </div>
+                      )}
+                    </div>
                   </CardContent>
                 </Card>
               ))}
+            </div>
+
+            {/* Monthly E-Workshop Caravan Stats */}
+            <div className="bg-gradient-to-r from-primary/5 to-accent/5 rounded-lg p-8">
+              <h3 className="text-2xl font-bold text-center mb-8 text-primary">Monthly E-Workshop Caravan Impact</h3>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+                {caravanStats.map((stat, index) => (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-3">
+                      <stat.icon className="w-8 h-8 text-accent-foreground" />
+                    </div>
+                    <div className="text-2xl font-bold text-primary mb-1">{stat.number}</div>
+                    <div className="text-sm text-muted-foreground">{stat.label}</div>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-8 text-center">
+                <p className="text-muted-foreground mb-4">
+                  Featured in KM Stories that Matter and Australian Knowledge Management Leadership Forum
+                </p>
+                <div className="flex flex-wrap justify-center gap-2">
+                  <span className="text-xs bg-primary/10 text-primary px-3 py-1 rounded-full">COVID-19 Innovation</span>
+                  <span className="text-xs bg-primary/10 text-primary px-3 py-1 rounded-full">4 Diaspora Countries</span>
+                  <span className="text-xs bg-primary/10 text-primary px-3 py-1 rounded-full">July 2020 - Present</span>
+                </div>
+              </div>
             </div>
           </div>
         </section>

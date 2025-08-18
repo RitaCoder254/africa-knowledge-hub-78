@@ -5,44 +5,9 @@ import { Button } from '../components/ui/button';
 import { Card, CardContent } from '../components/ui/card';
 import { Badge } from '../components/ui/badge';
 import { Input } from '../components/ui/input';
-import { BookOpen, Download, Play, Search, Calendar, User, ArrowRight, FileText, Video, BookOpenCheck } from 'lucide-react';
+import { BookOpen, Download, Play, Search, Calendar, User, ArrowRight, FileText, Video, BookOpenCheck, Users, Award } from 'lucide-react';
 
 const KnowledgeHub = () => {
-  const featuredArticles = [
-    {
-      title: 'Digital Transformation in African Public Sectors: A Knowledge Management Perspective',
-      excerpt: 'Exploring how knowledge management principles can guide successful digital transformation initiatives across African government institutions.',
-      author: 'Dr. Margaret Wanjiku',
-      date: 'January 15, 2025',
-      category: 'Digital Innovation',
-      readTime: '8 min read',
-      featured: true
-    },
-    {
-      title: 'The Role of Indigenous Knowledge in Climate Adaptation Strategies',
-      excerpt: 'Understanding how traditional knowledge systems can complement modern approaches to climate change adaptation in African communities.',
-      author: 'Prof. James Mukiri',
-      date: 'January 10, 2025',
-      category: 'Climate Change',
-      readTime: '12 min read'
-    },
-    {
-      title: 'Building Information Literacy in Rural Communities: Lessons from Kenya',
-      excerpt: 'Case study of successful information literacy programs implemented in rural Kenyan communities and their impact on development outcomes.',
-      author: 'Sarah Achieng',
-      date: 'January 5, 2025',
-      category: 'Community Development',
-      readTime: '6 min read'
-    },
-    {
-      title: 'Knowledge Economies and Africa\'s 2063 Vision: Progress and Challenges',
-      excerpt: 'Assessment of Africa\'s progress toward building knowledge-based economies as outlined in the African Union\'s Agenda 2063.',
-      author: 'Dr. Nerisa Wanjala',
-      date: 'December 28, 2024',
-      category: 'Policy Analysis',
-      readTime: '10 min read'
-    }
-  ];
 
   const resources = [
     {
@@ -169,55 +134,61 @@ const KnowledgeHub = () => {
           </div>
         </section>
 
-        {/* Featured Articles */}
+        {/* Knowledge Management Focus */}
         <section className="py-20">
           <div className="container mx-auto px-4">
-            <div className="flex justify-between items-center mb-12">
-              <h2 className="text-3xl font-bold text-primary">Featured Articles</h2>
-              <Button variant="outline">
-                View All Articles
-                <ArrowRight className="ml-2 w-4 h-4" />
-              </Button>
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-primary mb-4">Knowledge Management Excellence</h2>
+              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+                Access practical resources, tools, and insights from our extensive experience in knowledge management across Africa
+              </p>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {featuredArticles.map((article, index) => (
-                <Card key={index} className={`hover-lift ${article.featured ? 'lg:row-span-2' : ''}`}>
-                  <CardContent className="p-6">
-                    {article.featured && (
-                      <Badge className="mb-4 bg-accent text-accent-foreground">
-                        Featured Article
-                      </Badge>
-                    )}
-                    
-                    <div className="flex flex-wrap gap-2 mb-3">
-                      <Badge variant="outline">{article.category}</Badge>
-                      <span className="text-sm text-muted-foreground">{article.readTime}</span>
-                    </div>
-                    
-                    <h3 className={`font-bold mb-3 text-primary ${article.featured ? 'text-xl' : 'text-lg'}`}>
-                      {article.title}
-                    </h3>
-                    
-                    <p className="text-muted-foreground mb-4 line-clamp-3">
-                      {article.excerpt}
-                    </p>
-                    
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center space-x-2 text-sm text-muted-foreground">
-                        <User className="w-4 h-4" />
-                        <span>{article.author}</span>
-                        <Calendar className="w-4 h-4 ml-2" />
-                        <span>{article.date}</span>
-                      </div>
-                      <Button variant="ghost" size="sm">
-                        Read More
-                        <ArrowRight className="ml-1 w-3 h-3" />
-                      </Button>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <Card className="text-center p-6 hover-lift">
+                <CardContent className="p-0">
+                  <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
+                    <BookOpen className="w-8 h-8 text-accent-foreground" />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3 text-primary">Training Programs</h3>
+                  <p className="text-muted-foreground text-sm mb-4">
+                    Comprehensive capacity building programs for librarians, archivists, and knowledge management professionals
+                  </p>
+                  <Button variant="outline" size="sm">
+                    Learn More
+                  </Button>
+                </CardContent>
+              </Card>
+
+              <Card className="text-center p-6 hover-lift">
+                <CardContent className="p-0">
+                  <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Users className="w-8 h-8 text-primary-foreground" />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3 text-primary">Monthly Caravan</h3>
+                  <p className="text-muted-foreground text-sm mb-4">
+                    Join our monthly e-workshops connecting 2000+ professionals across 35+ African countries
+                  </p>
+                  <Button variant="outline" size="sm">
+                    Join Caravan
+                  </Button>
+                </CardContent>
+              </Card>
+
+              <Card className="text-center p-6 hover-lift">
+                <CardContent className="p-0">
+                  <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Award className="w-8 h-8 text-accent-foreground" />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3 text-primary">Conferences</h3>
+                  <p className="text-muted-foreground text-sm mb-4">
+                    Host of the Africa Regional Conference on Knowledge Management and related events
+                  </p>
+                  <Button variant="outline" size="sm">
+                    View Events
+                  </Button>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </section>
