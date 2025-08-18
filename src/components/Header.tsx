@@ -58,9 +58,9 @@ const Header = () => {
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-3">
               <img 
-                src="/src/assets/information-africa-logo.png" 
+                src="/lovable-uploads/8aaff1d3-8b7c-4922-af75-55f02c4809d6.png" 
                 alt="Information Africa Logo"
-                className="w-12 h-12 object-contain"
+                className="h-12 object-contain"
               />
               <div>
                 <h1 className="text-xl font-bold text-primary">Information Africa</h1>

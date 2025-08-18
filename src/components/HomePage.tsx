@@ -102,9 +102,9 @@ const HomePage = () => {
           <div className="max-w-4xl mx-auto fade-in">
             <div className="flex justify-center mb-8">
               <img 
-                src="/src/assets/information-africa-logo.png" 
+                src="/lovable-uploads/8aaff1d3-8b7c-4922-af75-55f02c4809d6.png" 
                 alt="Information Africa Logo"
-                className="w-32 h-32 object-contain"
+                className="h-32 object-contain"
               />
             </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">

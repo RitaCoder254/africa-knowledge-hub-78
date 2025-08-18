@@ -323,41 +323,6 @@ const Impact = () => {
           </div>
         </section>
 
-        {/* Testimonials */}
-        <section className="py-20 bg-card">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold mb-6 text-primary">What Leaders Say</h2>
-              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                Testimonials from organizational leaders who have experienced our impact
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-              {testimonials.map((testimonial, index) => (
-                <Card key={index} className="hover-lift">
-                  <CardContent className="p-6">
-                    <div className="flex items-center mb-4">
-                      {[...Array(testimonial.rating)].map((_, i) => (
-                        <Star key={i} className="w-5 h-5 text-accent fill-current" />
-                      ))}
-                    </div>
-                    
-                    <Quote className="w-8 h-8 text-accent mb-4" />
-                    
-                    <p className="text-muted-foreground mb-6 italic">"{testimonial.quote}"</p>
-                    
-                    <div className="border-t border-border pt-4">
-                      <p className="font-semibold text-primary">{testimonial.author}</p>
-                      <p className="text-sm text-muted-foreground">{testimonial.position}</p>
-                      <p className="text-sm text-accent">{testimonial.organization}</p>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </section>
 
         {/* Achievements & Recognition */}
         <section className="py-20">
